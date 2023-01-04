@@ -22,3 +22,20 @@ pip install pygame
 
 Chaque étape sera dans un commit différent
 
+### Etape 1 : création de la structure
+
+Création des fichier python suivants:
+
+```shell
+└ py-doom
+  ├ main.py
+  ├ map.py
+  ├ object_renderer.py
+  ├ player.py
+  ├ raycasting.py
+  └ setting.py
+```
+
+### Etape 2: création de la class Game
+
+Création d'une class python de gestion de l'espace pygame.
