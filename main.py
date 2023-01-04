@@ -9,6 +9,7 @@ class Game:
         pg.init()
         self.screen = pg.display.set_mode(RES)
         self.clock = pg.time.Clock()
+        # définie une constante pour garder une vitesse de mouvements constant, même si on change le nombre de FPS
         self.delta_time = 1
         self.new_game()
 

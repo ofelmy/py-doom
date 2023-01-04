@@ -33,8 +33,7 @@ class Player:
             dy += speed_cos
         
         # met à jour la nouvelle position du joueur
-        self.x += dx
-        self.y += dy
+        self.check_wall_collision (dx, dy)
 
         # calcule l'angle de vision du joueur par rapport à la map
         if keys[pg.K_LEFT]:
@@ -42,6 +41,18 @@ class Player:
         if keys[pg.K_RIGHT]:
             self.angle += PLAYER_ROT_SPEED * self.game.delta_time
         self.angle %= math.tau
+
+    # vérifie qu'il n'y a pas de mur aux coordonnées x,y
+    def check_wall(self, x, y):
+        return (x, y) not in self.game.map.world_map
+
+    # calcule les coordonnées en fonction des murs
+    def check_wall_collision(self, dx, dy):
+        if self.check_wall(int(self.x + dx), int(self.y)):
+            self.x += dx
+        if self.check_wall(int(self.x), int(self.y + dy)):
+            self.y += dy
+
 
     # dessine le joueur et sa vision
     def draw(self):

@@ -53,3 +53,7 @@ Crée et gère la map
 ### Etape 4: Création du joueur
 
 Crée le joueur, gère ses mouvements, et indique la direction de sa vision
+
+### Etape 5: Gère la collision du joueur avec les murs
+
+vérifie que le joueur ne peut pas traverser les murs
