@@ -57,3 +57,7 @@ Crée le joueur, gère ses mouvements, et indique la direction de sa vision
 ### Etape 5: Gère la collision du joueur avec les murs
 
 vérifie que le joueur ne peut pas traverser les murs
+
+### Etape 6: Prépare le ray casting
+
+Scanne l'ensemble des points qui devront être affichés par rapport à la vision du joueur

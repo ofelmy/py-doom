@@ -56,10 +56,10 @@ class Player:
 
     # dessine le joueur et sa vision
     def draw(self):
-        # dessine la ligne de vision du joueur
-        pg.draw.line(self.game.screen, 'yellow',(self.x * 100, self.y *100),
-                    (self.x * 100 + WIDTH * math.cos(self.angle),
-                     self.y * 100 + WIDTH * math.sin(self.angle)), 2)
+        # dessine la ligne de vision du joueur (commenté lors de l'affichage du raycasting)
+        # pg.draw.line(self.game.screen, 'yellow',(self.x * 100, self.y *100),
+        #             (self.x * 100 + WIDTH * math.cos(self.angle),
+        #              self.y * 100 + WIDTH * math.sin(self.angle)), 2)
         # dessine le joueur
         pg.draw.circle(self.game.screen, 'green', (self.x * 100, self.y * 100), 15)
 
@@ -74,6 +74,7 @@ class Player:
         return self.x, self.y
 
     # définie la méthode propriété "map_pos", qui retourne la position avec les entiers x,y
+    # retourne la coordonnée du jour arrondi à l'intersection de la grille
     @property
     def map_pos(self):
         return int(self.x), int(self.y)

@@ -3,6 +3,8 @@ import sys
 from settings import *
 from map import *
 from player import *
+from raycasting import *
+
 class Game:
     
     def __init__(self):
@@ -17,11 +19,14 @@ class Game:
     def new_game(self):
         self.map = Map(self)
         self.player = Player(self)
+        self.raycasting = RayCasting(self)
     
     # met à jour l'affichage de la fenêtre de jeu 
     def update(self):
         # met à jour le joueur
         self.player.update()
+        # met à jour les rayons du raycasting
+        self.raycasting.update()
         # affiche tout ce qui a été dessiné 
         pg.display.flip()
         # met à jour la fréquence de rafraîchissement
