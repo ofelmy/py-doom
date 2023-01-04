@@ -39,3 +39,13 @@ Création des fichier python suivants:
 ### Etape 2: création de la class Game
 
 Création d'une class python de gestion de l'espace pygame.
+
+On peut lancer le jeu :
+
+```shell
+python.exe .\main.py
+```
+
+### Etape 3: création de la map
+
+Crée et gère la map

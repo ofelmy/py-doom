@@ -1,6 +1,7 @@
 import pygame as pg
 import sys
 from settings import *
+from map import *
 
 class Game:
     
@@ -8,10 +9,11 @@ class Game:
         pg.init()
         self.screen = pg.display.set_mode(RES)
         self.clock = pg.time.Clock()
+        self.new_game()
 
-    # crée une fonction vide qui sera complétée plus tard
+    # crée un objet Map
     def new_game(self):
-        pass
+        self.map = Map(self)
     
     # met à jour l'affichage de la fenêtre de jeu 
     def update(self):
@@ -22,9 +24,10 @@ class Game:
         # définit le titre de la fenêtre de jeu.
         pg.display.set_caption(f'{self.clock.get_fps() : .1f}')
 
-    # remplit la fenêtre du jeu en noir
+    # met la fenêtre du jeu en noir, et dessine par dessus
     def draw(self):
         self.screen.fill('black')
+        self.map.draw()
     
     # récupère les evènements utilisateur
     def check_events(self):
@@ -40,3 +43,7 @@ class Game:
             self.check_events()
             self.update()
             self.draw()
+
+if __name__ == '__main__':
+    game = Game()
+    game.run()
