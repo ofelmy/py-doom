@@ -27,7 +27,6 @@ class Map:
             for i, value in enumerate(row):
                 if value: 
                     self.world_map[(i, j)] = value
-        print(self.world_map)
     
     # dessine des rectangles de 100x100 aux positions indiquées par world_map
     def draw(self):

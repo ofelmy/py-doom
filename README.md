@@ -49,3 +49,7 @@ python.exe .\main.py
 ### Etape 3: création de la map
 
 Crée et gère la map
+
+### Etape 4: Création du joueur
+
+Crée le joueur, gère ses mouvements, et indique la direction de sa vision
