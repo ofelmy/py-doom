@@ -65,3 +65,8 @@ Scanne l'ensemble des points qui devront être affichés par rapport à la visio
 ### Etape 7: commencer le rendu 3D en ray-casting
 
 pour chaque rayon de vision du joueur, un rectangle vertical est dessiné.
+
+### Etape 8: améliore le rendu
+
+Corrige l'effet fish-eye
+calcule la couleur du mur en fonction de sa distance au joueur.
