@@ -37,8 +37,8 @@ class Game:
     # met la fenêtre du jeu en noir, et dessine par dessus
     def draw(self):
         self.screen.fill('black')
-        self.map.draw()
-        self.player.draw()
+        # self.map.draw()
+        # self.player.draw()
     
     # récupère les evènements utilisateur
     def check_events(self):

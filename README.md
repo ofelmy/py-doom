@@ -61,3 +61,7 @@ vérifie que le joueur ne peut pas traverser les murs
 ### Etape 6: Prépare le ray casting
 
 Scanne l'ensemble des points qui devront être affichés par rapport à la vision du joueur
+
+### Etape 7: commencer le rendu 3D en ray-casting
+
+pour chaque rayon de vision du joueur, un rectangle vertical est dessiné.

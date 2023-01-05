@@ -62,8 +62,15 @@ class RayCasting:
                 depth = depth_hor
 
             # affiche les rayons (debug)
-            pg.draw.line(self.game.screen, 'yellow', (100 * ox, 100 * oy),
-                        (100 * ox + 100 * depth * cos_a, 100 * oy + 100 * depth * sin_a), 2)
+            # pg.draw.line(self.game.screen, 'yellow', (100 * ox, 100 * oy),
+            #             (100 * ox + 100 * depth * cos_a, 100 * oy + 100 * depth * sin_a), 2)
+            
+            # calcul de la taille de la projection
+            proj_height = SCREEN_DIST / (depth + 0.0001)
+
+            # dessine les murs : pour chaque rayon, un rectangle est dessiné
+            pg.draw.rect(self.game.screen, 'white',
+                        (ray * SCALE, HALF_HEIGHT - proj_height //2, SCALE, proj_height))
 
             ray_angle += DELTA_ANGLE
 
